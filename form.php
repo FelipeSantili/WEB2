@@ -1,27 +1,34 @@
+<?php
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Formulário</title>
+    <title>Document</title>
 </head>
 <body>
-    <h3>Formulário Aula</h3>
+    <h1>Formulário a validar</h1>
 
-    <form method="POST"  action="form_exec.php">
+    <form method="post" onsubmit="return validar();">
         <label for="nome">Nome</label>
-        <input name="nome" type="text" placeholder="Informe o nome" />
-
+        <input type="text" name="nome" id="nome" placeholder="Nome:"
+            value="<?= $nome ?>">
         <br></br>
 
         <label for="idade">Idade</label>
-        <input name="idade" type="text" placeholder="Informe a idade" />
-
+        <input type="number" name="idade" id="idade" placeholder="Idade:">
         <br></br>
 
         <button type="submit">Enviar</button>
-
     </form>
+
+    <div id="divMsg" style="color: red;"></div>
 </body>
+
+<script src="validacao.js"></script>    
 </html>
